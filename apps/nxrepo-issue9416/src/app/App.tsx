@@ -23,6 +23,7 @@ import NxCloud from './icons/nx-cloud.svg';
 import GitHub from './icons/github.svg';
 import Terminal from './icons/terminal.svg';
 import Heart from './icons/heart.svg';
+import { Button } from 'react-native-elements';
 
 export const App = () => {
   const [whatsNextYCoord, setWhatsNextYCoord] = useState<number>(0);
@@ -71,6 +72,7 @@ export const App = () => {
                 </Text>
               </TouchableOpacity>
             </View>
+            <Button>React Native elements button</Button>
           </View>
           <View style={styles.section}>
             <View style={[styles.shadowBox]}>
