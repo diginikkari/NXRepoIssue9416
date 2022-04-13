@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "nxrepo-issue9416": "apps/nxrepo-issue9416",
+    "nxrepo-issue9416-e2e": "apps/nxrepo-issue9416-e2e"
+  }
+}

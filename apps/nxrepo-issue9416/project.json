@@ -1,0 +1,76 @@
+{
+  "root": "apps/nxrepo-issue9416",
+  "sourceRoot": "apps/nxrepo-issue9416/src",
+  "projectType": "application",
+  "targets": {
+    "start": {
+      "executor": "@nrwl/react-native:start",
+      "options": {
+        "port": 8081
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "nx start nxrepo-issue9416"
+      }
+    },
+    "run-ios": {
+      "executor": "@nrwl/react-native:run-ios",
+      "options": {}
+    },
+    "bundle-ios": {
+      "executor": "@nrwl/react-native:bundle",
+      "outputs": ["apps/nxrepo-issue9416/build"],
+      "options": {
+        "entryFile": "apps/nxrepo-issue9416/src/main.tsx",
+        "platform": "ios",
+        "bundleOutput": "dist/apps/nxrepo-issue9416/ios/main.jsbundle"
+      }
+    },
+    "run-android": {
+      "executor": "@nrwl/react-native:run-android",
+      "options": {}
+    },
+    "build-android": {
+      "executor": "@nrwl/react-native:build-android",
+      "outputs": [
+        "apps/nxrepo-issue9416/android/app/build/outputs/bundle",
+        "apps/nxrepo-issue9416/android/app/build/outputs/apk"
+      ],
+      "options": {}
+    },
+    "bundle-android": {
+      "executor": "@nrwl/react-native:bundle",
+      "options": {
+        "entryFile": "apps/nxrepo-issue9416/src/main.tsx",
+        "platform": "android",
+        "bundleOutput": "dist/apps/nxrepo-issue9416/android/main.jsbundle"
+      }
+    },
+    "sync-deps": {
+      "executor": "@nrwl/react-native:sync-deps",
+      "options": {}
+    },
+    "ensure-symlink": {
+      "executor": "@nrwl/react-native:ensure-symlink",
+      "options": {}
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/nxrepo-issue9416/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/nxrepo-issue9416"],
+      "options": {
+        "jestConfig": "apps/nxrepo-issue9416/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
